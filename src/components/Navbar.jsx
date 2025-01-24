@@ -17,8 +17,9 @@ export default async function Navbar() {
   const isUserAuthenticated = await isAuthenticated();
 
   return (
-    <div className="mt-4 grid grid-cols-2 px-5">
-      <div className="justify-self-end">
+    <div className="mt-4 grid grid-cols-3 px-5">
+      <div></div>
+      <div className="justify-self-center">
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem className="flex gap-4">

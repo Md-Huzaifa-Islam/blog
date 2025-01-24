@@ -13,11 +13,11 @@ export default function page() {
       .then((res) => setData(res.data));
   }, []);
   return (
-    <div>
+    <div className="px-5 py-20">
       {data && (
-        <div>
-          <p className="">{data.title}</p>
-          <p className="">{data.body}</p>
+        <div className="flex flex-col gap-10">
+          <p className="text-5xl">{data.title}</p>
+          <p className="text-2xl">{data.body}</p>
         </div>
       )}
     </div>

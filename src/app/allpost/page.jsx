@@ -18,7 +18,9 @@ const fetchPost = async () => {
 export default async function page() {
   const data = await fetchPost();
   return (
-    <div className="px-5">
+    <div className="mb-20 mt-10 space-y-10 px-5">
+      <p className="text-center text-4xl">These are our all blogs</p>
+
       <div className="grid grid-cols-4 gap-4">
         {data.map((post) => (
           <div className="space-y-4 rounded-lg border px-3 py-5" key={post?.id}>

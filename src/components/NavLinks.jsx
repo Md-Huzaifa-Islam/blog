@@ -1,11 +1,14 @@
 "use client";
 import { LoginLink, LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components";
 import React from "react";
+import { Button } from "./ui/button";
 
 export default function NavLinks() {
   return (
-    <div className="flex items-center gap-5">
-      <LoginLink>login</LoginLink>
+    <div className="">
+      <Button>
+        <LoginLink>login</LoginLink>
+      </Button>
     </div>
   );
 }
