@@ -7,7 +7,7 @@ export default async function Navbar() {
   return (
     <div className="flex items-center justify-between">
       <p>Home</p>
-      {isUserAuthenticated && <p>Profile</p>}
+      {isUserAuthenticated && <p>Profile section</p>}
     </div>
   );
 }
