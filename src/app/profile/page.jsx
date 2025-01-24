@@ -9,7 +9,7 @@ export default async function page() {
       <p className="text-center text-5xl font-semibold">
         Welcome to your profile!
       </p>
-      {isUserAuthenticated && <p>user is in</p>}
+      {!isUserAuthenticated && <p>user is in</p>}
     </div>
   );
 }
