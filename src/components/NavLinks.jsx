@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 
 export default function NavLinks() {
   return (
-    <div className="">
+    <div>
       <Button>
         <LoginLink>login</LoginLink>
       </Button>
