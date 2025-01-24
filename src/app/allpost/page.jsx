@@ -1,7 +1,8 @@
+import { Button } from "@/components/ui/button";
 import axios from "axios";
 import Link from "next/link";
 import React from "react";
-import { Button } from "./ui/button";
+
 const fetchPost = async () => {
   try {
     // Server-side Post fetching
@@ -14,13 +15,12 @@ const fetchPost = async () => {
     throw new Error("Failed to fetch data");
   }
 };
-export default async function PostsContainer() {
+export default async function page() {
   const data = await fetchPost();
-  const data2 = data.slice(0, 12);
   return (
     <div className="px-5">
       <div className="grid grid-cols-4 gap-4">
-        {data2.map((post) => (
+        {data.map((post) => (
           <div className="space-y-4 rounded-lg border px-3 py-5" key={post?.id}>
             <p className="line-clamp-1 text-2xl font-medium">{post.title}</p>
             <p className="line-clamp-2 opacity-80">{post.body}</p>
