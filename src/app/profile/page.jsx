@@ -1,14 +1,15 @@
 import React from "react";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
-import Link from "next/link";
-export default async function Navbar() {
+
+export default async function page() {
   const { isAuthenticated } = getKindeServerSession();
   const isUserAuthenticated = await isAuthenticated();
-
   return (
-    <div className="flex items-center justify-between">
-      <p>Home</p>
-      <Link href={"/profile"}>Profile section</Link>
+    <div>
+      <p className="text-center text-5xl font-semibold">
+        Welcome to your profile!
+      </p>
+      {isUserAuthenticated && <p>user is in</p>}
     </div>
   );
 }
