@@ -28,6 +28,11 @@ export default async function Navbar() {
                   Home
                 </NavigationMenuLink>
               </Link>
+              <Link href="/allpost" legacyBehavior passHref>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  All blogs
+                </NavigationMenuLink>
+              </Link>
               <Link href="/profile" legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                   Profile

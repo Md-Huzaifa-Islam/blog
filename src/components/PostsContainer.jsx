@@ -19,11 +19,18 @@ export default async function PostsContainer() {
   const data2 = data.slice(0, 12);
   return (
     <div className="px-5">
-      <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-4">
+      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
         {data2.map((post) => (
-          <div className="space-y-4 rounded-lg border px-3 py-5" key={post?.id}>
-            <p className="line-clamp-1 text-2xl font-medium">{post.title}</p>
-            <p className="line-clamp-2 opacity-80">{post.body}</p>
+          <div
+            className="space-y-2 rounded-lg border px-2 py-5 md:space-y-4 md:px-3"
+            key={post?.id}
+          >
+            <p className="line-clamp-1 text-xl font-medium md:text-2xl">
+              {post.title}
+            </p>
+            <p className="line-clamp-2 text-sm opacity-80 md:text-base">
+              {post.body}
+            </p>
             <Button>
               <Link href={`/blog/${post?.id}`}>Details</Link>
             </Button>
